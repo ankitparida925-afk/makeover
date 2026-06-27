@@ -10,10 +10,10 @@ import AdBannersSection from '../components/AdBannersSection';
 import GalleryGlimpseSection from '../components/GalleryGlimpseSection';
 import BlogAndNewsletterSection from '../components/BlogAndNewsletterSection';
 
-const HomePage = () => {
+const HomePage = ({ onBookClick }) => {
   return (
     <>
-      <Hero />
+      <Hero onBookClick={onBookClick} />
       <FeaturesBar />
       <AboutSection />
       <TrainingSection />

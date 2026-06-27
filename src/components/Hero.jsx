@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaCrown } from 'react-icons/fa';
 
-const Hero = () => {
+const Hero = ({ onBookClick }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const contentRef = useRef(null);
@@ -121,12 +121,18 @@ const Hero = () => {
             <h3 className="text-xs lg:text-sm font-bold tracking-[2px] text-text-gray mb-3 drop-shadow-sm">WHERE STYLE MEETS PERFECTION</h3>
             <FaCrown className="text-gold text-lg mb-4" />
             
-            <p className="text-text-gray text-[12px] lg:text-[13px] leading-relaxed max-w-[240px] sm:max-w-[350px] mb-10 drop-shadow-sm">
+            <p className="text-text-gray text-[12px] lg:text-[13px] leading-relaxed max-w-[240px] sm:max-w-[350px] mb-8 drop-shadow-sm">
               Step into a world of luxury and transformation.<br className="hidden lg:block"/>
               We bring out the best in you with our professional<br className="hidden lg:block"/>
               care and unique styling.
             </p>
 
+            <button 
+              onClick={onBookClick}
+              className="bg-gold text-black rounded-none px-8 py-4 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 shadow-lg shadow-gold/20"
+            >
+              Book Appointment
+            </button>
           </div>
 
           <div className="flex-1 hidden lg:block"></div>

@@ -26,7 +26,7 @@ function App() {
         <Navbar onBookClick={() => setIsBookModalOpen(true)} />
         
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage onBookClick={() => setIsBookModalOpen(true)} />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/services" element={<ServicesPage onBookClick={() => setIsBookModalOpen(true)} />} />
           <Route path="/training" element={<TrainingPage onEnrollClick={() => setIsEnrollModalOpen(true)} />} />
