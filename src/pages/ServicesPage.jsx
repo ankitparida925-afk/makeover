@@ -82,9 +82,12 @@ const ServicesPage = ({ onBookClick }) => {
               >
                 Book a Service
               </button>
-              <button className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300">
+              <Link 
+                to="/training"
+                className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300 inline-block text-center"
+              >
                 Explore Courses
-              </button>
+              </Link>
             </div>
           </div>
 
