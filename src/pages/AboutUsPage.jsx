@@ -1,5 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import footerLogoImage from '../assets/footer-logo.png';
+import brushesImg from '../assets/galleryPage/port-6.jpg';
+import jessicaImg from '../assets/servicesPage/jessica-t.jpg';
+import elenaImg from '../assets/servicesPage/elena-v.jpg';
 
 const AboutUsPage = () => {
   return (
@@ -34,9 +38,9 @@ const AboutUsPage = () => {
             <p className="text-gray-300 text-lg leading-relaxed mb-5 font-light max-w-[500px]">
               At Mehaks Makeover, we believe makeup is not about changing who someone is—it is about enhancing natural beauty and bringing out confidence. Our team creates personalized looks for every occasion, style, and personality.
             </p>
-            <button className="bg-gold text-black px-10 py-5 text-xs font-bold tracking-widest uppercase hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-1">
+            <Link to="/services" className="bg-gold text-black px-10 py-5 text-xs font-bold tracking-widest uppercase hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-1 inline-block">
               Explore Our Services
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -94,7 +98,7 @@ const AboutUsPage = () => {
               
               {/* Image 2 (Top Right) */}
               <div className="absolute top-[5%] right-0 w-[50%] h-[45%] z-20 shadow-2xl overflow-hidden group border-4 border-white bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1512496115851-a52bc5ac37fa?auto=format&fit=crop&q=80" alt="Brushes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={brushesImg} alt="Brushes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
 
               {/* Image 3 (Bottom Overlap) */}
@@ -220,7 +224,7 @@ const AboutUsPage = () => {
             {/* Team Member 3 */}
             <div className="bg-[#FAF9F6] p-6 hover:-translate-y-2 transition-transform duration-500 group shadow-sm hover:shadow-xl flex flex-col">
               <div className="w-full aspect-[3/3] overflow-hidden mb-4 relative">
-                <img src="https://images.unsplash.com/photo-1521590832167-7bfc17484d20?auto=format&fit=crop&q=80" alt="Jessica T." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={jessicaImg} alt="Jessica T." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <h3 className="text-xl font-heading text-app-primary uppercase tracking-widest mb-1 group-hover:text-gold transition-colors">Jessica T.</h3>
               <p className="text-xs text-gold uppercase tracking-widest font-bold mb-3">Hair Specialist</p>
@@ -235,7 +239,7 @@ const AboutUsPage = () => {
             {/* Team Member 4 */}
             <div className="bg-[#FAF9F6] p-6 hover:-translate-y-2 transition-transform duration-500 group shadow-sm hover:shadow-xl flex flex-col">
               <div className="w-full aspect-[3/3] overflow-hidden mb-4 relative">
-                <img src="https://images.unsplash.com/photo-1512496115851-a52bc5ac37fa?auto=format&fit=crop&q=80" alt="Elena V." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={elenaImg} alt="Elena V." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <h3 className="text-xl font-heading text-app-primary uppercase tracking-widest mb-1 group-hover:text-gold transition-colors">Elena V.</h3>
               <p className="text-xs text-gold uppercase tracking-widest font-bold mb-3">Skin Expert</p>

@@ -55,7 +55,7 @@ const GalleryGlimpseSection = () => {
           </div>
 
           {/* Top Row - 5: End horizontal block */}
-          <div className="col-span-1 row-span-1 md:row-span-2 relative overflow-hidden border border-gold/10 group shadow-sm">
+          <div className="col-span-2 sm:col-span-1 row-span-1 md:row-span-2 relative overflow-hidden border border-gold/10 group shadow-sm">
             <img src={img5} className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105" alt="Showcase" />
           </div>
 
