@@ -346,12 +346,18 @@ const ServicesPage = ({ onBookClick }) => {
                 Our studio and academy are ready to support every step of your beauty journey — from a single makeover to a full professional career.
               </p>
               <div className="flex flex-wrap justify-center gap-4 pt-4">
-                <button className="bg-gold text-black rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-app-primary hover:text-white transition-all duration-300 shadow-md">
+                <button 
+                  onClick={onBookClick}
+                  className="bg-gold text-black rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-app-primary hover:text-white transition-all duration-300 shadow-md"
+                >
                   Book a Service
                 </button>
-                <button className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300">
+                <Link 
+                  to="/training"
+                  className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300 inline-block"
+                >
                   Join the Academy
-                </button>
+                </Link>
               </div>
             </div>
           </div>
