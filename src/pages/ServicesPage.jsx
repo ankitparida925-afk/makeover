@@ -82,12 +82,12 @@ const ServicesPage = ({ onBookClick }) => {
               >
                 Book a Service
               </button>
-              <Link 
-                to="/training"
+              <button 
+                onClick={() => document.getElementById('our-offerings')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300 inline-block text-center"
               >
                 Explore Courses
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -113,7 +113,7 @@ const ServicesPage = ({ onBookClick }) => {
       {/* =========================================
           2. STUDIO SERVICES — Soft Organic Grid
       ========================================= */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section id="our-offerings" className="py-24 lg:py-32 bg-white">
         <div className="max-w-[1200px] mx-auto px-5">
           <div className="text-center max-w-2xl mx-auto mb-20">
             <span className="font-script text-gold text-4xl lg:text-5xl block mb-2">Our Offerings</span>
