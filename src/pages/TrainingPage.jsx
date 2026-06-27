@@ -67,14 +67,8 @@ const TrainingPage = ({ onEnrollClick }) => {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <button 
-                onClick={() => document.getElementById('academy-courses')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gold text-black rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-app-primary hover:text-white transition-all duration-300 shadow-lg shadow-gold/20"
-              >
-                Explore Courses
-              </button>
-              <button 
                 onClick={onEnrollClick}
-                className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300"
+                className="bg-gold text-black rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-app-primary hover:text-white transition-all duration-300 shadow-lg shadow-gold/20"
               >
                 Enroll Now
               </button>
