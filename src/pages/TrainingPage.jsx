@@ -289,8 +289,8 @@ const TrainingPage = ({ onEnrollClick }) => {
                 >
                   Enroll Now
                 </button>
-                <Link to="/services" className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300 inline-block">
-                  Explore Services
+                <Link to="/contact" className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300 inline-block">
+                  Contact Us
                 </Link>
               </div>
             </div>
