@@ -73,40 +73,87 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             
             {/* Left Column: Course Summary Card */}
-            <div className="lg:col-span-5 bg-[#FAF6F0] border border-[#EEDAD1]/50 p-6 flex flex-col justify-between text-left">
-              <div className="space-y-6">
-                <div>
-                  <span className="text-xs font-bold tracking-widest text-gold uppercase block mb-1">Academy Program</span>
-                  <h3 className="text-lg sm:text-xl font-heading text-black uppercase tracking-wider leading-tight">
-                    Professional Makeup Artist Course
-                  </h3>
+            {(() => {
+              const courseDetailsMap = {
+                'Basic Makeup Course': {
+                  title: 'Basic Makeup Course',
+                  duration: '4 Weeks',
+                  mode: 'Offline',
+                  details: ['Basics of Skincare & Base', 'Personal Grooming Looks', 'Standard Eye Makeup', 'Certificate Included']
+                },
+                'Advanced Makeup Course': {
+                  title: 'Advanced Makeup Course',
+                  duration: '8 Weeks',
+                  mode: 'Offline',
+                  details: ['Bridal, HD & Airbrush prep', 'Creative Fashion Looks', 'Professional Certificate', 'Hands-on practice sessions']
+                },
+                'Bridal Makeup Course': {
+                  title: 'Bridal Makeup Course',
+                  duration: '5 Weeks',
+                  mode: 'Offline',
+                  details: ['Traditional & Modern Bridal', 'Saree Draping & Hair prep', 'Professional Certificate', 'Live model practice']
+                },
+                'Professional Makeup Artist Course': {
+                  title: 'Professional Makeup Artist Course',
+                  duration: '3 Months',
+                  mode: 'Offline',
+                  details: ['Certificate Included', 'Placement Assistance', 'Live Practical Sessions', 'Masterclass cosmetics kit']
+                },
+                'Hair Styling Course': {
+                  title: 'Hair Styling Course',
+                  duration: '6 Weeks',
+                  mode: 'Offline',
+                  details: ['Classic buns & braids', 'Modern waves & styling', 'Tool handling & product rules', 'Certificate Included']
+                },
+                'Nail Art Course': {
+                  title: 'Nail Art Course',
+                  duration: '3 Weeks',
+                  mode: 'Offline',
+                  details: ['Gel & acrylic extensions', 'Brush work & nail art patterns', 'Removal & nail care guidance', 'Certificate Included']
+                },
+                'Self Makeup Course': {
+                  title: 'Self Makeup Course',
+                  duration: '2 Weeks',
+                  mode: 'Offline / Hybrid',
+                  details: ['Day & Night Makeup routines', 'Personal product counseling', 'Self brow shaping guide', 'Certificate Included']
+                }
+              };
+
+              const currentCourse = courseDetailsMap[formData.selectedCourse] || courseDetailsMap['Basic Makeup Course'];
+
+              return (
+                <div className="lg:col-span-5 bg-[#FAF6F0] border border-[#EEDAD1]/50 p-6 flex flex-col justify-between text-left transition-all duration-300">
+                  <div className="space-y-6">
+                    <div>
+                      <span className="text-xs font-bold tracking-widest text-gold uppercase block mb-1">Academy Program</span>
+                      <h3 className="text-lg sm:text-xl font-heading text-black uppercase tracking-wider leading-tight">
+                        {currentCourse.title}
+                      </h3>
+                    </div>
+                    
+                    <div className="w-12 h-[1px] bg-gold"></div>
+
+                    <ul className="space-y-4 text-xs sm:text-sm text-gray-700 p-0 m-0 list-none">
+                      <li className="flex items-center gap-2">
+                        <span className="text-gold font-bold">⏱</span> <span><strong>Duration:</strong> {currentCourse.duration}</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-gold font-bold">📍</span> <span><strong>Mode:</strong> {currentCourse.mode}</span>
+                      </li>
+                      {currentCourse.details.map((detail, dIdx) => (
+                        <li key={dIdx} className="flex items-center gap-2">
+                          <span className="text-gold font-bold">✦</span> <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-[#EEDAD1]/50 text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">
+                    Mehaks Makeover Academy © 2026
+                  </div>
                 </div>
-                
-                <div className="w-12 h-[1px] bg-gold"></div>
-
-                <ul className="space-y-4 text-xs sm:text-sm text-gray-700 p-0 m-0 list-none">
-                  <li className="flex items-center gap-2">
-                    <span className="text-gold font-bold">⏱</span> <span><strong>Duration:</strong> 3 Months</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-gold font-bold">📍</span> <span><strong>Mode:</strong> Offline</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-gold font-bold">📜</span> <span>Certificate Included</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-gold font-bold">💼</span> <span>Placement Assistance</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-gold font-bold">✨</span> <span>Live Practical Sessions</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-[#EEDAD1]/50 text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">
-                Mehaks Makeover Academy © 2026
-              </div>
-            </div>
+              );
+            })()}
 
             {/* Right Column: Enrollment Form */}
             <form onSubmit={handleSubmit} className="lg:col-span-7 space-y-6">
