@@ -86,7 +86,7 @@ const ServicesPage = ({ onBookClick }) => {
                 onClick={() => document.getElementById('our-offerings')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border border-gold text-gold rounded-none px-10 py-4.5 text-xs font-bold tracking-widest uppercase hover:bg-gold hover:text-black transition-all duration-300 inline-block text-center"
               >
-                Explore Courses
+                Our Services
               </button>
             </div>
           </div>
