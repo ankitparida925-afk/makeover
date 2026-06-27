@@ -183,11 +183,6 @@ const TrainingPage = ({ onEnrollClick }) => {
             ))}
           </div>
 
-          <div className="text-center mt-16">
-            <button className="bg-gold text-black rounded-none px-12 py-5 text-xs font-bold tracking-widest uppercase hover:bg-app-primary hover:text-white transition-all duration-300 shadow-md">
-              View All Courses
-            </button>
-          </div>
         </div>
       </section>
 
